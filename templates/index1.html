@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Corporate Actions</title>
+  </head>
+  <body>
+    <h1>Corporate Actions</h1>
+    <table>
+      <tr>
+        <th>Symbol</th>
+        <th>CompanyName</th>
+        <th>Series</th>
+        <th>Subject</th>
+        <th>Ex-Date</th>
+        <th>Record-Date</th>
+      </tr>
+      {% for item in data %}
+      <tr>
+        <td>{{ item.symbol }}</td>
+        <td>{{ item.comp }}</td>
+        <td>{{ item.series }}</td>
+        <td>{{ item.subject }}</td>
+        <td>{{ item.exDate }}</td>
+        <td>{{ item.recDate }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
